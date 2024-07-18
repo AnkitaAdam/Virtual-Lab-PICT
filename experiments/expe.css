@@ -38,9 +38,9 @@
         /* Make the sidebar fixed and ensure it stays below the navbar */
         .sidebar {
             position: fixed;
-            top: 150px; /* Adjust to match the height of the navbar */
+            top: 195px; /* Adjust to match the height of the navbar */
             left: 0;
-            height: calc(100vh - 300px); /* Adj00usted to consider the navbar height */
+            height: calc(100vh - 380px); /* Adj00usted to consider the navbar height */
             width: 200px;
             background-color: #007bff; /* Different color */
             color: white;
