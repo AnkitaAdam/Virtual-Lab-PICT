@@ -1,0 +1,129 @@
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            width: 100%;
+            margin-left:90px;
+        }
+        .navbar-brand img {
+            height: 60px; /* Reduced height */
+            width: 60px; /* Adjust width accordingly */
+            margin-right: 10px; /* Space between logo and text */
+        }
+        .header-title {
+            text-align: center;
+            margin: 10px;
+            margin-bottom:40px;
+            font-size: 2em;
+            color: #007bff;
+            font-weight: bold;
+            
+        }
+        .college-name {
+            font-weight: bold;
+            color: #fff;
+            font-size: 25px; /* Adjust font size */
+        }
+        /* Make the sidebar fixed and ensure it stays below the navbar */
+        /* Make the sidebar fixed and ensure it stays below the navbar */
+        .sidebar {
+            position: fixed;
+            top: 150px; /* Adjust to match the height of the navbar */
+            left: 0;
+            height: calc(100vh - 300px); /* Adj00usted to consider the navbar height */
+            width: 200px;
+            background-color: #007bff; /* Different color */
+            color: white;
+            padding-top: 20px;
+            overflow-y: auto;
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
+
+        /* Ensure the main content area is aware of the fixed sidebar */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Optional: Improve the visual hierarchy and interactivity */
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #f8f9fa;
+            color:black;
+        }
+
+        .content h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-header {
+            cursor: pointer;
+        }
+        .collapse.show .card-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .option {
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: lightgreen;
+        }
+        .incorrect {
+            background-color: lightcoral;
+        }
+        .unselected {
+            background-color: yellow;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+    

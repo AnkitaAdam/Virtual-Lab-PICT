@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="expe.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://pict.edu/">
+            <img src="../pictlogo30.png" alt="Logo">
+            <span class="college-name">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://pict.edu/" target="_blank" style="font-weight: bold; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../explist.html" style="font-weight: bold; font-size:20px;">Labs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#aim" data-toggle="collapse">Aim</a>
+        <a href="#equ" data-toggle="collapse">Equipments</a>
+        <a href="#theory" data-toggle="collapse">Theory</a>
+        <a href="#design" data-toggle="collapse">Design</a>
+        <a href="#procedure" data-toggle="collapse">Procedure</a>
+        <a href="#simulation" data-toggle="collapse">Simulation</a>
+        <a href="#FAQ" data-toggle="collapse">FAQ's</a>
+        <a href="#mcq" data-toggle="collapse">Test</a>
+        <a href="#references" data-toggle="collapse">References</a>
+    </div>
+
+    <div class="content">
+        <h1>Design & simulate single bit RAM cell OR 4 address * 2bit memory using 8 single bit RAM cells.</h1>
+        
+        <div id="aim" class="collapse show">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Aim</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        Design & simulate single bit RAM cell
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="equ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Equipments</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No.</th>
+                                    <th>COMPONENT</th>
+                                    <th>SPECIFICATION</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Software Used</td>
+                                    <td>Virtual Lab Simulator </td>
+                                   </tr>
+        
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="theory" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#theoryContent">
+                    <strong>Theory</strong>
+                </div>
+                <div id="theoryContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Design of Memory:</b></p><br>
+                        <p>A memory unit is a collection of storage cells together with associated circuits needed to transform insformation in and out of  the  device. Memory cells which can be accessed for information  transfer to or  from any desired random location is called random access memory(RAM). The block diagram of a memory unit-</p>
+                        <br>
+                        <img src="../img/expe9_1.png" width="400" height="300">
+                        <br><br>
+                        <p><b>Internal Construction:</b> The internal construction of a random-access memory of m words with n bits per word consists of m*n binary storage cells and associated decoding circuits for selecting individual words. The binary cell is the basic building block of a memory unit.</p>
+                        <br><br>
+
+                        <b>Design of a RAM cell:</b><br><br>
+                        <p>The binary cell has three inputs and one output. The select input enables the cell for reading or writing and the reda/write input determines the cell operation when it is selected. A 1 in the read/write input provides the read operation by forming a path from the ﬂip-ﬂop to the output terminal. A 0 in the read/write input provides the write operation by forming a path from the input terminal to the ﬂip-ﬂop. the logic diagram is-
+                           
+                            <br>
+
+                            <img src="../img/expe9_2.png" width="400" height="300"><br><br>
+
+                            <b>Objective: </b>
+                            <br><br>
+                            <p>Objective of memory design(single  bit  RAM  cell): <br>
+                                <br>1.	understanding behaviour of memory from working module and the module designed by the student as part of the experiment
+                                <br>2.	Designing an arithmetic logic unit for given parameter
+                                <br><br>
+                                <b>Examining behaviour of arithmetic logic unit for the working module and module designed by the student as part of the experiment (refer to the circuit diagram):
+                                    Loading data in the arithmetic logic unit (refer to procedure tab for further detail and experiment manual for pin numbers):
+                                    </b>
+                                    <br>
+                                    initialization (refer to experiment manual for pin numbers): <br>
+                                    - select=1 <br>
+                                    - R/W'=0 <br>
+                                    Loading data in the memory (refer to procedure tab for further detail and experiment manual for pin numbers):<br>
+                                    - input(i/p)=1<br><br>
+
+
+                                    
+
+                                    <b>1) examining the read behaviour:</b>
+                                    <br>
+                                    <p>initialization (refer to experiment manual for pin numbers):<br>
+                                        - select=1<br>
+                                        - R/W'=1<br>
+                                        check output:<br>
+                                        - output(o/p)=1<br>
+                                        - it will give the value which was previously written <br>
+
+                                        </p><br>
+                                    
+                                        
+                            <p><b>Recommended learning activities for the experiment:</b> Leaning activities are designed in two stages, a basic stage  and  an  advanced stage. Accomplishment of each stage can be self-evaluated through the given set of quiz questions consisting of multiple type and subjective type questions.	In	the	basic	stage,	it	is	recommended	to	perform	the experiment ﬁrstly, on the given encapsulated working module, secondly, on the module designed by the student, having gone through the theory, objective and procuder. By performing the experiment on the working module, students can only observe the input-output behavior. Where as, performing experiments on the designed module, students can do circuit analysis, error analysis in addition with the input-output behavior. It is recommended to perform the experiments following the given guideline to check behavior and test plans along with their own circuit analysis. Then students are recommended to move on to the advanced stage. The advanced stage includes the accomplishment of the given assignments which will provide deeper understanding of the topic with innovative circuit design experience. At any time, students can mature their knowledge base by further reading the references provided for the experiment.
+                                </p><br>
+                            <p>- color conﬁguration of wire for 5 valued logic supported by the simulator:<br>
+                                - if value is UNKNOWN, wire color= maroon <br>
+                                - if value is TRUE, wire color= blue<br>
+                                - if value is FALSE, wire color= black<br>
+                                - if value is HI IMPEDENCE, wire color= green <br>
+                                - if value is INVALID, wire color= orange<br>
+                                </p><br><br>
+
+                                <b>Test plan: </b><br><br>
+                                <p>1. Do some read operation by properly setting the R/W', memory enable then give input and check the output.<br>
+                                    2. Do some write operation by properly setting the R/W', memory enable then give input and check the output.<br>
+                                    3. Do some read operation without setting the memory enable but properly setting the R/W' then give input and check the output.<br>
+                                    </p>
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#procedureContent">
+                    <strong>Design</strong>
+                </div>
+                <div id="procedureContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Design of Memory: </b></p>
+                        
+                        <br>
+                        <p>To see the step by step process to perform the experiment in simulator follow<br>
+                        <b>Procedure to perform the experiment: Design of 4X3 RAM Memory</b>
+                        </p>
+
+                        <br><br>
+                         <p>1.	Start the simulator as directed.This simulator supports  5-valued logic.<br><br>
+                            2.	To design the circuit we need 12 binary RAM cell, 9 OR gate, 7 bit switch (to give input,which will toggle its value with a double click), 3 bit display (to see the output), wires.
+                            <br><br>3.	The pin conﬁguration of a component is shown whenever the mouse is hovered on any canned component of the palette or press the 'show pinconﬁg' button. Pin numbering starts from 1 and from the bottom left corner (indicated with the circle) and increases anticlockwise.
+                            <br><br>4.	For a binary RAM cell input is in pin-5, output is in pin-4 and select is pin-8, Read/Write is in pin-6, for read operation give 1 input to Read/Write pin. For write operation give 0 input to Read/Write pin.
+                            <br><br>5.	For a 'decoder with enable', input A is in pin-6, B is in pin-5, output D0 is in pin-4, D1 is in pin-3, D2 is in pin-2, D3 is in pin-1 and Enable is in pin-8
+                            <br><br>6.	Click on the 'decoder with enable' component (in the Other Components drawer in the pallet) and then click on the position of the editor window where you want to add the component (no drag and drop, simple click will serve the purpose), likewise add 12 binary RAM cell (from the Other Components drawer in the pallet), 9 OR gates (from Logic Gates drawer in the pallete), 7 bit switches (which will toggle its value with a double click), 3 bit displays (from Display and Input drawer of the pallet,if it is not seen scroll down in the drawer)
+                            <br><br>7.	To connect any two components select the Connection menu of Palette, and then click on the Source terminal and click on  the target terminal. According to the circuit diagram connect all the components, connect 2 bit switches to the inputs of the  'decoder with enable' (which will act as address input), 1 bit switch to the enable pin of the 'decoder with enable' (which will act as memory enable input), connect a bit switch to the Read/Write(R/W') line, 3 bit switches to the data inputs line, 3 bit displays to the data output line and OR gates according to the diagram shown in the circuit diagram. after athe connection is over click the selection tool in the pallete.
+                            <br><br>8.	To see the circuit working, Do some read or write operation by properly setting the R/W', memory enable then give input and check the output. suppose you give, R/W'=1, memory enable=1, address input=01, data input=101, then it will be a read operation and you will not see 101 as output, it will store 101 in the word-1. now again set, R/W'=0, memory enable=1, address input=01, then it will be a write operation and you will see 101 as the content of word-1 on the output display.
+
+                        </p>
+
+                        <p><b>Circuit diagram of 4X3 RAM memory:</b></p><br>
+                        
+                        <img src="../img/expe9_3.png" width="600" height="600">
+                        <br>
+                        <p><b>Components:</b><br><br>
+                            For Designing a RAM Cell<br>
+                            To build a RAM Cell, we need :<br><br>
+                            1.	AND Gate(2 input)-6<br>
+                            2.	NOT Gate-2<br>
+                            3.	RS Flip Flop-1<br><br>
+                            For Designing a 4X3 RAM<br>
+                            To build a 4X3 RAM, we need :<br><br>
+                            1.	OR Gate(2 input)-11<br>
+                            2.	RAM Cell-12<br>
+                            3.	2X4 Decoder with Enable-1<br>
+                        </p>                            
+
+                        <br><br>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="procedure" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Procedure</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Follow the below steps</b></p>
+                        1. Connections were given as per circuit diagram. 
+                        <br>2. Logical inputs were given as per truth table.
+                        <br>3. Observe the logical output and verify with the truth tables.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Simulation</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        Interactive simulation of the experiment.
+                        <p>Here you can embed an interactive simulation tool or provide links to simulation resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="FAQ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#pretestContent">
+                    <strong>Frequently Asked Questions</strong>
+                </div>
+                <div id="pretestContent" class="collapse">
+                    <div class="card-body">
+                        <br>
+                       
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mcq" class="collapse">
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#posttestContent">
+            <strong>Test</strong>
+        </div>
+        <div id="posttestContent" class="collapse">
+        <div class="container mt-5">
+        
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Test Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="scoreText">You scored : </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('submitTestButton').addEventListener('click', function() {
+    // Check if all questions are answered
+    if (validateAnswers()) {
+        // Calculate the score
+        let score = calculateScore();
+
+        // Set the score text
+        document.getElementById('scoreText').textContent = 'You scored : ' + score + '/5';
+
+        // Show the modal
+        $('#scoreModal').modal('show');
+    } else {
+        // Alert the user if any question is unanswered
+        alert("Please answer all the questions before submitting.");
+    }
+});
+
+// Event listener for the modal close event
+// Event listener for the modal close event
+$('#scoreModal').on('hidden.bs.modal', function () {
+    // Reset all highlighted options
+    resetOptions();
+
+    // Uncheck all radio buttons
+    $('input[type="radio"]').prop('checked', false);
+    highlightAnswers();
+});
+
+
+function validateAnswers() {
+    // Check if all questions are answered
+    let allAnswered = true;
+
+    // Loop through each question
+    for (let i = 1; i <= 5; i++) {
+        let selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+        if (!selectedOption) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    return allAnswered;
+}
+
+function resetOptions() {
+    // Reset all highlighted options
+    let options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+    });
+}
+
+function calculateScore() {
+    let score = 0;
+
+    // Check answers
+    if (document.querySelector('input[name="question1"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question2"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question3"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question4"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question5"]:checked')?.value === 'd') score++;
+
+    // Highlight answers
+    highlightAnswers();
+
+    return score;
+}
+
+function highlightAnswers() {
+    // Question 1
+    highlightQuestion('question1', 'b');
+    // Question 2
+    highlightQuestion('question2', 'b');
+    // Question 3
+    highlightQuestion('question3', 'c');
+    // Question 4
+    highlightQuestion('question4', 'a');
+    // Question 5
+    highlightQuestion('question5', 'd');
+}
+
+function highlightQuestion(questionName, correctAnswer) {
+    let options = document.getElementsByName(questionName);
+    options.forEach(option => {
+        if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+        } else if (option.checked) {
+            option.parentElement.classList.add('incorrect');
+        }
+    });
+}
+
+</script>
+
+
+        <div id="references" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#referencesContent">
+                    <strong>References</strong>
+                </div>
+                <div id="referencesContent" class="collapse">
+                    <div class="card-body">
+                        <ul>
+                            <li>Reference 1: “Digital Fundamentals” by Floyd & Jain</li>
+                            <li>Reference 2: R. P. Jain, “Modern Digital Electronics”, 3rd Edition, Tata McGraw-Hill</li>
+                            <li>Reference 3: 3.	Malvino, D.Leach“Digital Principles and Applications”, 5th edition, Tata McGraw- Hill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

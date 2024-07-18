@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="expe.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://pict.edu/">
+            <img src="../pictlogo30.png" alt="Logo">
+            <span class="college-name">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://pict.edu/" target="_blank" style="font-weight: bold; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../explist.html" style="font-weight: bold; font-size:20px;">Labs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#aim" data-toggle="collapse">Aim</a>
+        <a href="#equ" data-toggle="collapse">Equipments</a>
+        <a href="#theory" data-toggle="collapse">Theory</a>
+        <a href="#design" data-toggle="collapse">Design</a>
+        <a href="#procedure" data-toggle="collapse">Procedure</a>
+        <a href="#simulation" data-toggle="collapse">Simulation</a>
+        <a href="#FAQ" data-toggle="collapse">FAQ's</a>
+        <a href="#mcq" data-toggle="collapse">Test</a>
+        <a href="#references" data-toggle="collapse">References</a>
+    </div>
+
+    <div class="content">
+        <h1>Design and implement modulo 'N' counter using IC7490 (N=100 max).</h1>
+        
+        <div id="aim" class="collapse show">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Aim</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        To design and implement mod - 10, mod - 99 BCD counter using IC 7490.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="equ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Equipments</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No.</th>
+                                    <th>COMPONENT</th>
+                                    <th>SPECIFICATION</th>
+                                    <th>DATASHEET LINK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>IC 7490</td>
+                                    <td>IC 7490</td>
+                                    <td><a href="https://example.com/datasheet7486" target="_blank">
+                                        Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>BASIC GATES</td>
+            <td>-</td>
+            <td>-</a></td>
+        </tr>
+        
+        <tr>
+            <td>3.</td>
+            <td>IC TRAINER KIT</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheettrainerkit" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>PATCH CORDS</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheetpatchcords" target="_blank">Datasheet</a></td>
+        </tr>
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="theory" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#theoryContent">
+                    <strong>Theory</strong>
+                </div>
+                <div id="theoryContent" class="collapse">
+                    <div class="card-body">
+                        <p>IC 7490 is a TTL MSI (medium scale integration) decade counter. It contains 4 master slave flip flops internally connected to provide MOD-2 i.e. divide by 2 and MOD-5
+                            i.e. divide by 5 counter. MOD-2 and Mod-5 counters can be used independently or in cascading.
+                            </p>
+                        <br>
+                        <p>It is a 4-bit ripple type decade counter. The device consists of 4-master slave flip flops internally connected to provide a divide by two and divide by 5 sections. Each section has a separate clock i/p to initiate state changes of the counter on the high to low clock transition.</p>
+                        <br>
+                        <p>Since the o/p from the divide by 2 section is not internally connected to the succeeding stages. The device may be operated in various counting modes. In a BCD counter, the CP1 input must be externally connected to QA o/p. The CP0 i/p receives the incoming count producing a BCD count sequence.</p>
+                        <br>
+                        <p>It is also provided with additional gating to provide a divide by 2 counter and binary counter for which the count cycle length is divide by 5. The device may be operated in various counting modes.</p>
+                        <br>
+                        <p>There are 2 resets i/ps R0 (1) and R0 (2) both of which need to be connected to the ‘logic 1’ for clearing all flip flops. Two set i/ps Rg(1) and Rg(2) when connected to logic are used for setting the counter to 1001 (BCD 9).</p>
+                        
+                        <br><br>
+                        
+                        <p><b>Pinout of IC 7490:</b></p>
+                        <br>
+                        <img src="../img/expe8_1.png" width="400" height="200">
+
+                        <br><br>
+                        
+                        <p><b>Function Table of MOD-2 counter:</b></p>
+                        <br>
+                        <img src="../img/expe8_2.png" width="400" height="200">
+
+                        <br><br>
+                        
+                        <p><b>Function Table of MOD-5 counter:</b></p>
+                        <br>
+                        <img src="../img/expe8_3.png" width="400" height="300">
+
+                        <br><br>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#procedureContent">
+                    <strong>Design</strong>
+                </div>
+                <div id="procedureContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>1] Design of MOD-10 counter using IC 7490: </b></p>
+                        
+                        <br>
+                        <p>The QA o/p the first flip flop is connected to the input B which is clock i/p of internal MOD- 5 ripple counter. Due to cascading of Mod-2 and Mod-5 counters, the overall configuration the decade counters count from 0000 to 1001. After 1001 mod-5 resets to 0000 and next count after 1001 is 0000.
+                            <br>
+                            When QA o/p is connected to B i/p, we have the Mod-2 counter followed by Mod-5 counter. The count sequence obtained is shown in the table. It may be noted that QA changes from 0 to 1 the state of Mod-5 counter doesn’t change, whereas when QA changes from 1 to 0 the Mod-5 counter goes to the next state.
+                        </p>
+
+                        <br><br>
+
+                        <p><b>Logic Diagram: </b></p><br><br>
+                        
+                        <img src="../img/expe8_4.png" width="400" height="400">
+                        <br><br>
+                        <p><b>Funtion Table:</b></p>
+                        <br><br>
+                        <img src="../img/expe8_5.png" width="400" height="400">
+
+                        <br><br>
+                        <p><b>Timing Diagram:</b></p>
+                        <br>
+                        <img src="../img/expe8_6.png" width="450" height="400"><br>
+                        
+                        <br><br>
+
+
+                        <p><b>2] Design of Mod-7 Counter using IC 7490: </b></p>
+                        
+                        <br><br>
+
+                        
+
+                        <p><b>Funtion Table:</b></p>
+                        <br><br>
+                        <img src="../img/expe8_8.png" width="400" height="400">
+                        <br><br>
+
+                        <p><b>Logic Diagram: </b></p><br>
+                        <img src="../img/expe8_7.png" width="400" height="400">
+                        <br><br>
+                        
+                        <p><b>Timing Diagram:</b></p>
+                        <br><br>
+                        <img src="../img/expe8_9.png" width="400" height="400"><br><br>
+
+
+                        <p><b>3] Design of Mod-99 using IC 7490: </b></p>
+                        
+                        <br><br>
+                        <p>For Mod-99 two IC 7490’s will be required. Hence to implement a
+                            divide by 99 counters we have to use two decade counters IC’s. A divide   by 99 counter counts 99 states from 0 to 98 and the counter should reset as soon as the count becomes 99. So in order to reset the counter of 99 connect the Q o/p which are equal to 1 in the count of 99 to an ‘And’ gate & then connect and o/p to the reset i/p of both IC’s.
+                           </p>
+
+                        <br><br>
+
+                        <p><b>Logic Diagram: </b></p><br><br>
+                        
+                        <img src="../img/expe8_10.png" width="650" height="400">
+                        <br><br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="procedure" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Procedure</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Follow the below steps</b></p>
+                        1. Connections were given as per circuit diagram. 
+                        <br>2. Logical inputs were given as per truth table.
+                        <br>3. Observe the logical output and verify with the truth tables.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Simulation</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        Interactive simulation of the experiment.
+                        <p>Here you can embed an interactive simulation tool or provide links to simulation resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div id="FAQ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#pretestContent">
+                    <strong>Frequently Asked Questions</strong>
+                </div>
+                <div id="pretestContent" class="collapse">
+                    <div class="card-body">
+                        <br>
+                        <p><b>Q.1] What is an N-modulo asynchronous counter??</b></p>
+                        <br>
+                        <p>An N-modulo asynchronous counter, also known as a ripple counter, is a digital counter that counts from 0 to N-1 and then resets to 0. It is built using flip-flops, with the count progression triggered by the clock signal.
+                        <br><br>
+
+                        <p><b>Q.2] How does an asynchronous counter differ from a synchronous counter?</b></p>
+                        <br>
+                        <p>In an asynchronous counter, the flip-flops do not receive the clock signal simultaneously. The first flip-flop receives the clock signal directly, and each subsequent flip-flop is clocked by the output of the previous flip-flop. In contrast, all flip-flops in a synchronous counter receive the clock signal at the same time.
+                        <br><br>
+
+                        <p><b>Q.3] What are the advantages and disadvantages of asynchronous counters?</b></p>
+                        <br>
+                        <p><b>Advantages:</b><br>
+                            •	Simple design and easy to implement.<br>
+                            •	Requires fewer components compared to synchronous counters.<br>
+                            <br><b>Disadvantages:</b><br>
+                            •	Propagation delay due to the ripple effect as the clock signal is passed through the flip-flops sequentially.<br>
+                            •	Slower operation speed compared to synchronous counters.   
+                        <br><br>
+
+                        <p><b>Q.4] What is propagation delay in an asynchronous counter?</b></p>
+                        <br>
+                        <p>Propagation delay is the time taken for the change in the input clock signal to propagate through each flip-flop in the counter. This delay accumulates as the clock signal is passed sequentially from one flip-flop to the next, causing the final output to be delayed.</p>
+
+                        <br><br>
+
+                        <p><b>Q.5] How can you implement a reset mechanism in an asynchronous counter?</b></p>
+                        <br>
+                        <p>A reset mechanism can be implemented using combinational logic gates (such as AND gates) to detect when the counter reaches the desired count NNN. When the counter reaches NNN, the reset signal is triggered, resetting all flip-flops to 0.
+                        <br><br>
+
+                        <p><b>Q.6] What is the modulus of an asynchronous counter?</b></p>
+                        <br>
+                        <p>The modulus of an asynchronous counter is the number of unique states it cycles through before returning to the initial state. For an N-modulo counter, the modulus is NNN.
+                        <br><br>
+
+                        <p><b>Q.7] Can you give an example of a Mod-10 asynchronous counter?</b></p>
+                        <br>
+                        <p>A Mod-10 asynchronous counter uses 4 flip-flops. The flip-flops are connected in series, with the clock input applied to the first flip-flop. The output of each flip-flop serves as the clock input for the next flip-flop. When the counter reaches 10 (1010 in binary), a reset logic resets all flip-flops to 0.
+                        <br><br>
+                        
+                        <p><b>Q.8] Why are asynchronous counters also called ripple counters?</b></p>
+                        <br>
+                        <p>Asynchronous counters are called ripple counters because the clock signal ripples through the flip-flops sequentially. The output of one flip-flop serves as the clock input for the next, causing a ripple effect.
+                        <br><br>
+
+                        <p><b>Q.9] What are some common applications of asynchronous counters?</b></p>
+                        <br>
+                        <p>Asynchronous counters are used in various applications, including:<br>
+                            •	Digital clocks and timers.<br>
+                            •	Frequency dividers.<br>
+                            •	Digital event counters.<br>
+                            •	Simple digital state machines.<br>
+                            •	Debouncing circuits for mechanical switches.
+                            
+                        <br><br>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mcq" class="collapse">
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#posttestContent">
+            <strong>Test</strong>
+        </div>
+        <div id="posttestContent" class="collapse">
+        <div class="container mt-5">
+        <form id="mcqForm">
+            <div class="form-group">
+                <label><b>Q.1 What is an N-modulo asynchronous counter also known as?</b></label>
+                <div>
+                    <input type="radio" name="question1" value="a"> a) Synchronous counter<br>
+                    <input type="radio" name="question1" value="b"> b) Ripple counter<br>
+                    <input type="radio" name="question1" value="c"> c) Ring counter<br>
+                    <input type="radio" name="question1" value="d"> d) Jhonson Counter
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.2 In an asynchronous counter, how is the clock signal distributed to the flip-flops?</b></label>
+                <div>
+                    <input type="radio" name="question2" value="a"> a) All flip-flops receive the clock signal simultaneously.<br>
+                    <input type="radio" name="question2" value="b"> b) Only the first flip-flop receives the clock signal, and the rest are clocked by the preceding flip-flop’s output.<br>
+                    <input type="radio" name="question2" value="c"> c) Each flip-flop receives a different clock signal.<br>
+                    <input type="radio" name="question2" value="d"> d) The clock signal is not used in asynchronous counters.
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.3 What is the primary drawback of an asynchronous counter?</b></label>
+                <div>
+                    <input type="radio" name="question3" value="a"> a) Complexity in design<br>
+                    <input type="radio" name="question3" value="b"> b) Complexity in design<br>
+                    <input type="radio" name="question3" value="c"> c) Propagation delay<br>
+                    <input type="radio" name="question3" value="d"> d) High cost
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.4 For a Mod-8 asynchronous counter, what is the maximum count?</b></label>
+                <div>
+                    <input type="radio" name="question4" value="a"> a) 7<br>
+                    <input type="radio" name="question4" value="b"> b) 8<br>
+                    <input type="radio" name="question4" value="c"> c) 15<br>
+                    <input type="radio" name="question4" value="d"> d) 16
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.5 If a 3-bit asynchronous counter is used, what is the modulus of the counter?</b></label>
+                <div>
+                    <input type="radio" name="question5" value="a"> a) 3<br>
+                    <input type="radio" name="question5" value="b"> b) 6<br>
+                    <input type="radio" name="question5" value="c"> c) 7<br>
+                    <input type="radio" name="question5" value="d"> d) 8
+                </div>
+            </div>
+            <center><button type="button" id="submitTestButton" class="btn btn-primary">Submit Test</button></center>
+        <br><br>
+        </form>
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Test Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="scoreText">You scored : </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('submitTestButton').addEventListener('click', function() {
+    // Check if all questions are answered
+    if (validateAnswers()) {
+        // Calculate the score
+        let score = calculateScore();
+
+        // Set the score text
+        document.getElementById('scoreText').textContent = 'You scored : ' + score + '/5';
+
+        // Show the modal
+        $('#scoreModal').modal('show');
+    } else {
+        // Alert the user if any question is unanswered
+        alert("Please answer all the questions before submitting.");
+    }
+});
+
+// Event listener for the modal close event
+// Event listener for the modal close event
+$('#scoreModal').on('hidden.bs.modal', function () {
+    // Reset all highlighted options
+    resetOptions();
+
+    // Uncheck all radio buttons
+    $('input[type="radio"]').prop('checked', false);
+    highlightAnswers();
+});
+
+
+function validateAnswers() {
+    // Check if all questions are answered
+    let allAnswered = true;
+
+    // Loop through each question
+    for (let i = 1; i <= 5; i++) {
+        let selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+        if (!selectedOption) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    return allAnswered;
+}
+
+function resetOptions() {
+    // Reset all highlighted options
+    let options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+    });
+}
+
+function calculateScore() {
+    let score = 0;
+
+    // Check answers
+    if (document.querySelector('input[name="question1"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question2"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question3"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question4"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question5"]:checked')?.value === 'd') score++;
+
+    // Highlight answers
+    highlightAnswers();
+
+    return score;
+}
+
+function highlightAnswers() {
+    // Question 1
+    highlightQuestion('question1', 'b');
+    // Question 2
+    highlightQuestion('question2', 'b');
+    // Question 3
+    highlightQuestion('question3', 'c');
+    // Question 4
+    highlightQuestion('question4', 'a');
+    // Question 5
+    highlightQuestion('question5', 'd');
+}
+
+function highlightQuestion(questionName, correctAnswer) {
+    let options = document.getElementsByName(questionName);
+    options.forEach(option => {
+        if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+        } else if (option.checked) {
+            option.parentElement.classList.add('incorrect');
+        }
+    });
+}
+
+</script>
+
+
+        <div id="references" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#referencesContent">
+                    <strong>References</strong>
+                </div>
+                <div id="referencesContent" class="collapse">
+                    <div class="card-body">
+                        <ul>
+                            <li>Reference 1: “Digital Fundamentals” by Floyd & Jain</li>
+                            <li>Reference 2: R. P. Jain, “Modern Digital Electronics”, 3rd Edition, Tata McGraw-Hill</li>
+                            <li>Reference 3: 3.	Malvino, D.Leach“Digital Principles and Applications”, 5th edition, Tata McGraw- Hill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="expe.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://pict.edu/">
+            <img src="../pictlogo30.png" alt="Logo">
+            <span class="college-name">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://pict.edu/" target="_blank" style="font-weight: bold; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../explist.html" style="font-weight: bold; font-size:20px;">Labs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#aim" data-toggle="collapse">Aim</a>
+        <a href="#equ" data-toggle="collapse">Equipments</a>
+        <a href="#theory" data-toggle="collapse">Theory</a>
+        <a href="#design" data-toggle="collapse">Design</a>
+        <a href="#procedure" data-toggle="collapse">Procedure</a>
+        <a href="#simulation" data-toggle="collapse">Simulation</a>
+        <a href="#FAQ" data-toggle="collapse">FAQ's</a>
+        <a href="#mcq" data-toggle="collapse">Test</a>
+        <a href="#references" data-toggle="collapse">References</a>
+    </div>
+
+    <div class="content">
+        <h1> Design and Implementation of logic functions using decoder IC 74138</h1>        </h1>
+        
+        <div id="aim" class="collapse show">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Aim</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        Implementation of logic functions using decoder IC 74138.<br><br>
+                        1. Verification of IC.<br>
+                        2. Boolean function implementation. <br>
+                            F(A,B,C ) = Σm( 0,3,6,7 )<br>
+                        3. Full Adder<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="equ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Equipments</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No.</th>
+                                    <th>COMPONENT</th>
+                                    <th>SPECIFICATION</th>
+                                    <th>DATASHEET LINK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Decoder</td>
+            <td>IC 74138</td>
+            <td><a href="https://drive.google.com/file/d/1PvTk7FqzFv4U5n1w_YSaWsoCVAmmkHdd/view?usp=drive_link" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>OR GATE</td>
+            <td>IC 7432</td>
+            <td><a href="https://example.com/datasheet7432" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>NOT GATE</td>
+            <td>IC 7404</td>
+            <td><a href="https://example.com/datasheet7404" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>IC TRAINER KIT</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheettrainerkit" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>PATCH CORDS</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheetpatchcords" target="_blank">Datasheet</a></td>
+        </tr>
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="theory" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#theoryContent">
+                    <strong>Theory</strong>
+                </div>
+                <div id="theoryContent" class="collapse">
+                    <div class="card-body">
+                        <b>Demultiplexer: </b><br>
+                        <p>- Demultiplexer is a logic circuit used to perform exactly reverse function performed by multiplexer. <br>
+                          - It accepts a single input and distributes among several outputs. The selection of a particular output line is controlled by a set of selection line. Hence, demultiplexer is equivalent to a single pole multiple way switch.<br>
+                          - There are ‘n’ output lines & ‘2m’ is the number of selection line whose bit combinations determine which output to be selected. <br>
+                             </p>
+                        <br>
+                        <p><b>Block Diagram:</b> </p>
+                        <br>
+                        <img src="../img/expe5_1.png" width="400" height="400">
+                        <br><br>
+                        
+
+                        <b>Decoder: </b><br><br>
+                        <p>A decoder is a combinational circuit. Figure shows block diagram of decoder. It has ‘m’ inputs and ‘n’ outputs where ‘n= 2m’ outputs. Decoder is identical to demultiplexer without any data input.</p>
+                        <br>
+                        <p><b>Block Diagram: </b></p>
+                        <br>
+                        <img src="../img/expe5_2.png" width="400" height="400">
+                        <br><br>
+
+
+                        <b>Difference between Multiplexer, Demultiplexer & Decoder</b><br>
+                        <br>
+                        <img src="../img/expe5_3.png">
+
+                        <br><br>
+
+                        <p><b>Encoder & Decoder:</b></p>
+                        <br>
+                        <p>
+                            1.	Encoders are used to encode given digital number into different numbering format .like decimal to BCD Encoder, Octal to Binary.<br>
+                            2.	Decoders are used to decode a coded binary word like BCD to seven segment decoder.<br>
+                            3.	Thus encoder and decoder are application specific logic develop, we can not use any type of input for any encoder and decoder.<br>
+                            4.	Need to select input according to encoder and decoder being selected for a particular application as mention in examples above.
+                        </p>
+                        <br><br>
+
+                        <p><b>Advantages:</b></p>
+                        <br>
+                        <p>
+                            1. The decoder provides best implementation whenever there are many outputs of the combinational circuit and each o/p of the function (or its complement) is required to be expressed with a small no. of minterms.
+                            <br>
+                            2. The decoder can function as demux. If the Enable i/p line is taken as Din (data i/p) .
+                            
+                        </p>
+                        <br><br>
+
+                        <p><b>Disadvantages:</b></p>
+                        <br>
+                        <p>
+                            Since decoder method requires an OR gate for each o/p function, so there is new hardware used. And it is always advisable to use minimum hardware as we come across problems like propagation delay of gates.
+                        </p>
+                        
+                        <br><br>
+
+                        <p><b>Applications:</b></p>
+                        <br>
+                        <p>
+                            Decoder is worthily used for decoding binary information and memory interfacing. It is used for the implementation of Boolean function.</p>
+
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#procedureContent">
+                    <strong>Design</strong>
+                </div>
+                <div id="procedureContent" class="collapse">
+                    <div class="card-body">
+                        <p>
+                            <b>1] VERIFICATION OF IC 74138: </b>
+                                <br><br>We use IC 74138 which accepts 3 binary weighted inputs (A0, A1, A2) and when enabled provides mutually exclusive active low outputs (y0-y7). It features 3 Enable i/ps. Two active low (G2A, G2B) and one active high (G1). Every output will be high unless G2A, G2Bare low and G1 is high. It has demultiplexing capability and multiple enable i/ps for easy expansion.
+
+
+                            </p>
+                            <br>
+                            <p><b>Function table of 3:8 decoder:</b></p>
+                            <br>
+                            <img src="../img/expe5_4.png"  width="600" height="400">
+                            <br><br>
+                           
+                            <p><b>2] CASCADING OF IC 74138:</b></p>
+                            <p>The enable i/p G1 active high of IC 74138 is used for cascading. for cascading 2 IC’s ,the enable i/p G1 of first IC is connected to G1 enable i/p of second IC through a NOT gate. This enable i/p is used as MSB select i/p line A3. the other three select input lines of both IC’s (A0,A1,A2) are also shorted to select input lines of second IC to get single i/p select lines (A0,A1,A2).
+                                <br><br>
+                                The i/p line A3 is used to enable /disable the 2 IC 74138 decoders. When A3=0, first IC is enabled and second is disabled. Thus the first decoder will generate minterms from 0000 to 0111 as o/p and the second decoder will generate nothing. When A3=1, the enable conditions are reversed and thus second decoder IC will generate minterms 1000 to 1111.
+                                </p>
+                            <br>
+                            <p><b>Function Table of 4:16 decoder using IC 74138 (3:8 decoder):</b>
+                            </p>
+                            <br>
+                            <img src="../img/expe5_5.png" width="800" height="600">
+                            <br><br>
+                            <p><b>Circuit Diagram: </b>
+                            </p>
+                            <img src="../img/expe5_6.png" width="600" height="400">
+                            <br><br><br>
+    
+                            <b>3] FUNCTION IMPLEMENTATION: </b><br><br>
+                            <p>The procedure for implementation of combinational circuit by means of a decoder and ‘OR’ gates requires that the Boolean function fir the circuit be expressed in Sum of Minterms. These forms can be obtained by expanding the function. A decoder is then chosen which generates all the minterms of n i/p variables. The i/p to each OR gate are selected from the decoder outputs according to the minterms list in each function.
+
+                                <br><br><b>For example,	F1=∑m (1, 3, 5, 7) and F2=∑m (2, 3, 6, 7)</b>
+                                </p>
+
+                                <img src="../img/expe5_7.png" width="600" height="400"><br>
+                                
+                                <p>First of all we need to decide on which type of decoder the above Boolean function can 
+
+                                    be implemented. The highest minterm is 7 and minimum no. of bits required to represent it in binary form are 3. So we have 3 select lines in 3:8 decoders so we can use IC 74138.
+                                    
+                                    To implement the function we require AND and NAND gate (7408 & 7400). As the o/p of the decoder IC 74138 are active low and we need to get o/p active high at the o/p pin of the function SUM and CARRY when respective minterms are selected.
+                                    </p>
+                            <br>
+                            
+                            <br>
+
+                            <p><b>Implementation of Full Adder: </b></p>
+
+                            <b>Truth Table: </b><br><br>
+                            <img src="../img/expe5_8.png" width="400" height="300">
+                            <br><br>
+                                <p>From the truth table we can write the functions for Sum and Carry as, </p>
+                                <b>
+                                    <br>For SUM = Σ m (1, 2, 4, 7) and
+                                    <br>For CARRY = Σ m (3, 5, 6, 7) 
+                                </b>
+                                <br><br>
+                                <b>Circuit Diagram: </b><br><br>
+                            <img src="../img/expe5_9.png" width="500" height="400">
+                            <br><br>
+                            <b>or</b><br><br>
+                            <img src="../img/expe5_10.png" width="500" height="400">
+                            
+                            <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="procedure" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Procedure</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Follow the below steps</b></p>
+                        1. Connections were given as per circuit diagram. 
+                        <br>2. Logical inputs were given as per truth table.
+                        <br>3. Observe the logical output and verify with the truth tables.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Simulation</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        Interactive simulation of the experiment.
+                        <p>Here you can embed an interactive simulation tool or provide links to simulation resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div id="FAQ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#pretestContent">
+                    <strong>Frequently Asked Questions</strong>
+                </div>
+                <div id="pretestContent" class="collapse">
+                    <div class="card-body">
+                        <br>
+                        <p><b>Q.1] What are the enable inputs used for?</b></p>
+                        <br>
+                        <p><b>G1:</b> Active high enable. Must be high (1) for the decoder to operate.
+                            <br><b>G2A and G2B:</b> Active low enables. Both must be low (0) for the decoder to operate. If the enable inputs are not correctly configured, all outputs will remain high regardless of the input values.
+                            <br><br>
+
+                        <p><b>Q.2] What are common applications of decoders?</b></p>
+                        <br>
+                         <p>• Memory Address Decoding: Selecting memory locations in RAM or ROM.<br>
+                            • Data Routing: Directing data to different parts of a circuit.<br>
+                            • Display Systems: Driving 7-segment displays.<br>
+                            • Microprocessor Control: Decoding instructions or control signals.<br>
+                            
+                            
+                        <br>
+
+                        <p><b>Q.3] What is the difference between decoder &Demultiplexer?</b></p>
+                        <br>
+                        <img src="../img/expe5_11.png" width="500" height="200">
+                        <br><br>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mcq" class="collapse">
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#posttestContent">
+            <strong>Test</strong>
+        </div>
+        <div id="posttestContent" class="collapse">
+        <div class="container mt-5">
+        <form id="mcqForm">
+            <div class="form-group">
+                <label><b>Q.1 A decoder converts n inputs to __________ outputs?</b></label>
+                <div>
+                    <input type="radio" name="question1" value="a"> a) n<br>
+                    <input type="radio" name="question1" value="b"> b) n^2<br>
+                    <input type="radio" name="question1" value="c"> c) 2^n<br>
+                    <input type="radio" name="question1" value="d"> d) n^n
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.2 Which of the following can be represented for decoder?</b></label>
+                <div>
+                    <input type="radio" name="question2" value="a"> a) Sequential circuit<br>
+                    <input type="radio" name="question2" value="b"> b) Combinational circuit<br>
+                    <input type="radio" name="question2" value="c"> c) Logical circuit<br>
+                    <input type="radio" name="question2" value="d"> d) None of the mentioned
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.3 Why is a demultiplexer called a data distributor?</b></label>
+                <div>
+                    <input type="radio" name="question3" value="a"> a) The input will be distributed to one of the outputs<br>
+                    <input type="radio" name="question3" value="b"> b) One of the inputs will be selected for the output<br>
+                    <input type="radio" name="question3" value="c"> c) The output will be distributed to one of the inputs<br>
+                    <input type="radio" name="question3" value="d"> d) Single input to Single Output
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.4 How many select lines are required for a 1-to-8 demultiplexer?</b></label>
+                <div>
+                    <input type="radio" name="question4" value="a"> a) 2<br>
+                    <input type="radio" name="question4" value="b"> b) 3<br>
+                    <input type="radio" name="question4" value="c"> c) 4<br>
+                    <input type="radio" name="question4" value="d"> d) 5
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.5 Which method of combination circuit implementation is widely adopted with maximum output functions and minimum requirement of ICs?
+                </b></label>
+                <div>
+                    <input type="radio" name="question5" value="a"> a) Multiplexer Method<br>
+                    <input type="radio" name="question5" value="b"> b) Decoder Method<br>
+                    <input type="radio" name="question5" value="c"> c) Encoder Method<br>
+                    <input type="radio" name="question5" value="d"> d) Parity Generator Method
+                </div>
+            </div>
+            <center><button type="button" id="submitTestButton" class="btn btn-primary">Submit Test</button></center>
+        <br><br>
+        </form>
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Test Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="scoreText">You scored : </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('submitTestButton').addEventListener('click', function() {
+    // Check if all questions are answered
+    if (validateAnswers()) {
+        // Calculate the score
+        let score = calculateScore();
+
+        // Set the score text
+        document.getElementById('scoreText').textContent = 'You scored : ' + score + '/5';
+
+        // Show the modal
+        $('#scoreModal').modal('show');
+    } else {
+        // Alert the user if any question is unanswered
+        alert("Please answer all the questions before submitting.");
+    }
+});
+
+// Event listener for the modal close event
+// Event listener for the modal close event
+$('#scoreModal').on('hidden.bs.modal', function () {
+    // Reset all highlighted options
+    resetOptions();
+
+    // Uncheck all radio buttons
+    $('input[type="radio"]').prop('checked', false);
+    highlightAnswers();
+});
+
+
+function validateAnswers() {
+    // Check if all questions are answered
+    let allAnswered = true;
+
+    // Loop through each question
+    for (let i = 1; i <= 5; i++) {
+        let selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+        if (!selectedOption) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    return allAnswered;
+}
+
+function resetOptions() {
+    // Reset all highlighted options
+    let options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+    });
+}
+
+function calculateScore() {
+    let score = 0;
+
+    // Check answers
+    if (document.querySelector('input[name="question1"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question2"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question3"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question4"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question5"]:checked')?.value === 'b') score++;
+
+    // Highlight answers
+    highlightAnswers();
+
+    return score;
+}
+
+function highlightAnswers() {
+    // Question 1
+    highlightQuestion('question1', 'c');
+    // Question 2
+    highlightQuestion('question2', 'b');
+    // Question 3
+    highlightQuestion('question3', 'a');
+    // Question 4
+    highlightQuestion('question4', 'b');
+    // Question 5
+    highlightQuestion('question5', 'b');
+}
+
+function highlightQuestion(questionName, correctAnswer) {
+    let options = document.getElementsByName(questionName);
+    options.forEach(option => {
+        if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+        } else if (option.checked) {
+            option.parentElement.classList.add('incorrect');
+        }
+    });
+}
+
+</script>
+
+
+        <div id="references" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#referencesContent">
+                    <strong>References</strong>
+                </div>
+                <div id="referencesContent" class="collapse">
+                    <div class="card-body">
+                        <ul>
+                            <li>Reference 1: “Digital Fundamentals” by Floyd & Jain</li>
+                            <li>Reference 2: R. P. Jain, “Modern Digital Electronics”, 3rd Edition, Tata McGraw-Hill</li>
+                            <li>Reference 3: 3.	Malvino, D.Leach“Digital Principles and Applications”, 5th edition, Tata McGraw- Hill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

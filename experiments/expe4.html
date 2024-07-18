@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="expe.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://pict.edu/">
+            <img src="../pictlogo30.png" alt="Logo">
+            <span class="college-name">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://pict.edu/" target="_blank" style="font-weight: bold; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../explist.html" style="font-weight: bold; font-size:20px;">Labs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#aim" data-toggle="collapse">Aim</a>
+        <a href="#equ" data-toggle="collapse">Equipments</a>
+        <a href="#theory" data-toggle="collapse">Theory</a>
+        <a href="#design" data-toggle="collapse">Design</a>
+        <a href="#procedure" data-toggle="collapse">Procedure</a>
+        <a href="#simulation" data-toggle="collapse">Simulation</a>
+        <a href="#FAQ" data-toggle="collapse">FAQ's</a>
+        <a href="#mcq" data-toggle="collapse">Test</a>
+        <a href="#references" data-toggle="collapse">References</a>
+    </div>
+
+    <div class="content">
+        <h1>Design Implementation of logic functions using multiplexer IC 74153 </h1>
+        
+        <div id="aim" class="collapse show">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Aim</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        Implementation of logic functions using multiplexer IC 74153 <br>
+                        1)	Verification of IC.<br>
+                        2)	Implementation of 8:1 Mux by cascading 2 4:1 mux in IC 74153<br>
+                        3)	Boolean function implementation For Example:<br>
+                        F(A,B,C) = Σm( 0,1,4,6,7 )<br>
+                        F(A,B,C,D)= Σm( 2,4,5,7,10,14 )<br>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="equ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Equipments</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No.</th>
+                                    <th>COMPONENT</th>
+                                    <th>SPECIFICATION</th>
+                                    <th>DATASHEET LINK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Multiplexer</td>
+                                    <td>IC 74153</td>
+                                    <td><a href="https://example.com/datasheet7486" target="_blank">
+                                        Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Decoder</td>
+            <td>IC 74138</td>
+            <td><a href="https://drive.google.com/file/d/1PvTk7FqzFv4U5n1w_YSaWsoCVAmmkHdd/view?usp=drive_link" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>OR GATE</td>
+            <td>IC 7432</td>
+            <td><a href="https://example.com/datasheet7432" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>NOT GATE</td>
+            <td>IC 7404</td>
+            <td><a href="https://example.com/datasheet7404" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>IC TRAINER KIT</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheettrainerkit" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>PATCH CORDS</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheetpatchcords" target="_blank">Datasheet</a></td>
+        </tr>
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="theory" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#theoryContent">
+                    <strong>Theory</strong>
+                </div>
+                <div id="theoryContent" class="collapse">
+                    <div class="card-body">
+                        <b>Digital Multiplexer</b><br>
+                        <p>Multiplexer are combinational digital circuits equating as controlled
+                            switches with several data inputs (I0, I1, I2 …) & one single data output (“out”). At any time one of the I/p is transmitted to output. According to binary signals applied on control pairs to circuit. Usually the number of data inputs is a power of two.		
+                            Multiplexing is   the process of transmitting a large no. of information units over a small no. of channel / digital multiplexer is a combinational large circuit which performs the operation of multiplexing . It selects the operation of multiplexing. It selects the operation of binary information from one of the many input lines & transfer to a single o/p line. Multiplexer is called a data selector or multiposition switch because it selects one of the many input. Selection of a particular line is controlled by a set of a selection lines or selects inputs. The number of select lines depends upon no. of input lines.
+                            Generally there is ‘n’ selects line for ‘m’ input lines. By applying a particular code on select lines is transmitted on the output lines. 
+                            </p>
+                        <br>
+                        <p>Block Diagram: </p>
+                        <br>
+                        <img src="../img/expe4_1.png">
+                        <br><br>
+
+                        <b>1] 2*1 Multiplexer: </b>
+                        <br>
+                        <p>In 2×1 multiplexer, there are only two inputs, i.e., A0 and A1, 1 selection line, i.e., S0 and single outputs, i.e., Y. On the basis of the combination of inputs which are present at the selection line S0, one of these 2 inputs will be connected to the output. The block diagram and the truth table of the 2×1 multiplexer are given below.
+                        </p>
+
+                        <br>
+                        <p>Block Diagram: </p>
+                        <br>
+                        <img src="../img/expe4_2.png">
+                        <br>
+                        <p>Truth Table: </p>
+                        <br>
+                        <img src="../img/expe4_3.png">
+                        <br>
+                        <p>The logical expression of the term Y is as follows:<br>
+                            Y=(S0*A0) + (S0*A1)
+                            </p>
+
+                        </p>
+                        
+                        <br>
+                        <p>Logic Diagram: </p>
+                        <br>
+                        <img src="../img/expe4_4.png"><br><br>
+
+                        
+                        <b>Uses of Mux: </b>
+                            <br><br>1. Use for Boolean function implementation.
+                            <br>2. Construct a common bus system.
+                            <br>3. To select between multiple sources & signal destination.
+                            <br>4. Inter register transfer.
+                        </p>
+                        <br><br>
+
+                        <b>Advantages: </b>
+
+                        <br><br>1. Simplification of logic expression not required.
+                        <br>2. Logic design is simplified.
+                        <br><br>
+
+                        <br><b>Disadvantages: </b><br><br>
+                        <p>Only one function can be implemented using one MUX. Hence they can’t be used in combinational logic circuit which contains many function.</p>
+                        <br><br>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#procedureContent">
+                    <strong>Design</strong>
+                </div>
+                <div id="procedureContent" class="collapse">
+                    <div class="card-body">
+                        <p>
+                            <b>1] VERIFICATION OF IC 74153: </b>
+                                <br><br>IC 74153 is a dual layer 4:1 MUX. It has four input lines for (I0D-I3D) for second MUX & active high output. ‘Ya’, ‘Yb’ (1Y or 2Y). It has select lines S1S0   common to both MUX. The Enable inputs are active low, Ea&Eb(1G and 2G).
+                            </p>
+                            
+                            <br>
+                            <img src="../img/expe4_5.png"  width="600" height="400">
+                            <br><br>
+                            <p>
+                            <b>2] CASCADING OF IC 74153:</b>
+                                <br><br>Cascading is done to expand two or more MUX IC’s to a digital multiplexer with larger no. of inputs i.e. multiplexer stocks or tress is designed. The enable input is used for cascading. In case of IC 74153 we have only two select lines. But for certain application 3 select lines are required then it can be obtained by cascading using enable. Now with 3 select lines we have 8 combinations. Out of this combination the MSB is O. MSB is 1 for last four combination so we can use these MSB to select any 1 MUX out of two by connecting it to E pin of first 4:1 MUX.
+                            </p><br>
+                            <p><b>Function table of IC 74153 as 8: 1 Mux by cascading 2 4:1 Mux:</b>
+                            </p>
+                            <br>
+                            <img src="../img/expe4_6.png" width="600" height="400">
+                            <br><br>
+    
+                            <b>3] FUNCTION IMPLEMENTATION: </b>
+                                <br><br><b>1) Y= ∑ m (0, 1, 4, 6, 7)</b></p><br>
+                            <p>This expression is in Standard SOP form and it is three variable function. So, we need to use multiplexer with three select inputs i.e. 8:1 Multiplexer. B For Boolean function in Standard SOP form we connect data inputs corresponding to the min terms present in the given function to VCC and remaining data inputs to ground.</p>
+                            <br>
+                            <b>Truth Table: </b><br>
+                            <img src="../img/expe4_7.png" width="600" height="300">
+                            <br><br>
+    
+                            <b>Circuit Diagram: </b><br>
+                            <img src="../img/expe4_8.png" width="600" height="450">
+                            <br><br>
+                            
+                            <br><br><b>2) Y(A, B, C, D) = ∑m (2, 4, 5, 7, 10, 14)</b></p><br>
+                            
+                            <b>Design Using MSB Bit A:</b><br>
+                            <img src="../img/expe4_9.png" width="500" height="200">
+                            <br><br>
+    
+                            <b>Circuit Diagram: </b><br>
+                            <img src="../img/expe4_10.png" width="550" height="400">
+                            <br><br>
+    
+                            <b>Design Using LSB Bit D:</b><br>
+                            <img src="../img/expe4_11.png" width="200" height="400">
+                            <br><br>
+                            
+                            <b>Circuit Diagram: </b><br>
+                            <img src="../img/expe4_12.png" width="550" height="400">
+                            <br><br>
+    
+                            <b>Truth Table: </b><br>
+                            <img src="../img/expe4_13.png" width="550" height="400">
+                            <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div id="procedure" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Procedure</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Follow the below steps</b></p>
+                        1. Connections were given as per circuit diagram. 
+                        <br>2. Logical inputs were given as per truth table.
+                        <br>3. Observe the logical output and verify with the truth tables.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Simulation</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        Interactive simulation of the experiment.
+                        <p>Here you can embed an interactive simulation tool or provide links to simulation resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="FAQ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#pretestContent">
+                    <strong>Frequently Asked Questions</strong>
+                </div>
+                <div id="pretestContent" class="collapse">
+                    <div class="card-body">
+                        <br>
+                        <p><b>Q.1] What is a multiplexer?</b></p>
+                        <br>
+                        <p>A multiplexer, or MUX, is a digital device that selects one of several input signals and forwards the selected input to a single output line. It functions like an electronic switch, allowing multiple signals to share one device or resource.</p>
+                        <br>
+
+                        <p><b>Q.2] What are the main types of multiplexers?</b></p>
+                        <br>
+                         <p>• 2-to-1 Multiplexer: Selects between 2 input lines.<br>
+                            • 4-to-1 Multiplexer: Selects between 4 input lines.<br>
+                            • 8-to-1 Multiplexer: Selects between 8 input lines.<br>
+                            • 16-to-1 Multiplexer: Selects between 16 input lines.<br>
+                            
+                        <br>
+
+                        <p><b>Q.3] How does a multiplexer work?</b></p>
+                        <br>
+                        <p>A multiplexer uses selection lines to choose which input line to connect to the output. For instance, a 4-to-1 multiplexer has 2 selection lines (because 22=4  ) that determine which of the 4 inputs is connected to the output.
+                        <br><br>
+
+                        <p><b>Q.4] What are the applications of multiplexers?</b></p>
+                        <br>
+                        • Data routing in digital circuits.<br>
+                        • Signal selection in communication systems.<br>
+                        • Data multiplexing in data acquisition systems.<br>
+                        • Function implementation in digital design (e.g., logic functions).<br>
+                        • Resource sharing in computer systems (e.g., bus systems).<br>
+                        <br><br>
+
+                        <p><b>Q.5] How do you choose the right multiplexer for your design?</b></p>
+                        <br>
+                         <p><b>• Number of inputs:</b> Determine how many inputs you need to select from.<br>
+                            <b>• Number of select lines: </b>Ensure you have enough select lines for your inputs.<br>
+                            <b>• Speed:</b> Check the propagation delay to ensure it meets your timing requirements.<br>
+                            <b>• Power consumption:</b> Consider the power requirements for your application.<br>
+                            <b>• Package type: </b> Choose the appropriate IC package for your circuit board.
+                            
+                        <br><br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mcq" class="collapse">
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#posttestContent">
+            <strong>Test</strong>
+        </div>
+        <div id="posttestContent" class="collapse">
+        <div class="container mt-5">
+        <form id="mcqForm">
+            <div class="form-group">
+                <label><b>Q.1 What is the primary function of a multiplexer?</b></label>
+                <div>
+                    <input type="radio" name="question1" value="a"> a) To convert analog signals to digital signals<br>
+                    <input type="radio" name="question1" value="b"> b) To store data temporarily<br>
+                    <input type="radio" name="question1" value="c"> c) To select one of many input signals and forward it to a single output<br>
+                    <input type="radio" name="question1" value="d"> d) To perform arithmetic operations
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.2 How many select lines are needed for a 16-to-1 multiplexer?</b></label>
+                <div>
+                    <input type="radio" name="question2" value="a"> a) 2<br>
+                    <input type="radio" name="question2" value="b"> b) 3<br>
+                    <input type="radio" name="question2" value="c"> c) 4<br>
+                    <input type="radio" name="question2" value="d"> d) 5
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.3 Which of the following is a key advantage of using multiplexers in digital circuits?</b></label>
+                <div>
+                    <input type="radio" name="question3" value="a"> a) They decrease the overall speed of the circuit<br>
+                    <input type="radio" name="question3" value="b"> b) They reduce the number of data paths needed<br>
+                    <input type="radio" name="question3" value="c"> c) They increase power consumption<br>
+                    <input type="radio" name="question3" value="d"> d) They simplify the logic design
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.4 In a 2-to-1 multiplexer, if the select line S=0, which input is connected to the output?</b></label>
+                <div>
+                    <input type="radio" name="question4" value="a"> a) Input 0 (I0)<br>
+                    <input type="radio" name="question4" value="b"> b) Input 1 (I1)<br>
+                    <input type="radio" name="question4" value="c"> c) Both inputs<br>
+                    <input type="radio" name="question4" value="d"> d) Neither input
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.5 How can multiple multiplexers be combined to create a larger multiplexer?</b></label>
+                <div>
+                    <input type="radio" name="question5" value="a"> a) By connecting their outputs together<br>
+                    <input type="radio" name="question5" value="b"> b) By using additional selection lines and control logic<br>
+                    <input type="radio" name="question5" value="c"> c) By cascading them in parallel<br>
+                    <input type="radio" name="question5" value="d"> d) By using higher power supplies
+                </div>
+            </div>
+            <center><button type="button" id="submitTestButton" class="btn btn-primary">Submit Test</button></center>
+        <br><br>
+        </form>
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Test Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="scoreText">You scored : </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('submitTestButton').addEventListener('click', function() {
+    // Check if all questions are answered
+    if (validateAnswers()) {
+        // Calculate the score
+        let score = calculateScore();
+
+        // Set the score text
+        document.getElementById('scoreText').textContent = 'You scored : ' + score + '/5';
+
+        // Show the modal
+        $('#scoreModal').modal('show');
+    } else {
+        // Alert the user if any question is unanswered
+        alert("Please answer all the questions before submitting.");
+    }
+});
+
+// Event listener for the modal close event
+// Event listener for the modal close event
+$('#scoreModal').on('hidden.bs.modal', function () {
+    // Reset all highlighted options
+    resetOptions();
+
+    // Uncheck all radio buttons
+    $('input[type="radio"]').prop('checked', false);
+    highlightAnswers();
+});
+
+
+function validateAnswers() {
+    // Check if all questions are answered
+    let allAnswered = true;
+
+    // Loop through each question
+    for (let i = 1; i <= 5; i++) {
+        let selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+        if (!selectedOption) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    return allAnswered;
+}
+
+function resetOptions() {
+    // Reset all highlighted options
+    let options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+    });
+}
+
+function calculateScore() {
+    let score = 0;
+
+    // Check answers
+    if (document.querySelector('input[name="question1"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question2"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question3"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question4"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question5"]:checked')?.value === 'b') score++;
+
+    // Highlight answers
+    highlightAnswers();
+
+    return score;
+}
+
+function highlightAnswers() {
+    // Question 1
+    highlightQuestion('question1', 'c');
+    // Question 2
+    highlightQuestion('question2', 'c');
+    // Question 3
+    highlightQuestion('question3', 'b');
+    // Question 4
+    highlightQuestion('question4', 'a');
+    // Question 5
+    highlightQuestion('question5', 'b');
+}
+
+function highlightQuestion(questionName, correctAnswer) {
+    let options = document.getElementsByName(questionName);
+    options.forEach(option => {
+        if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+        } else if (option.checked) {
+            option.parentElement.classList.add('incorrect');
+        }
+    });
+}
+
+</script>
+
+
+        <div id="references" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#referencesContent">
+                    <strong>References</strong>
+                </div>
+                <div id="referencesContent" class="collapse">
+                    <div class="card-body">
+                        <ul>
+                            <li>Reference 1: “Digital Fundamentals” by Floyd & Jain</li>
+                            <li>Reference 2: R. P. Jain, “Modern Digital Electronics”, 3rd Edition, Tata McGraw-Hill</li>
+                            <li>Reference 3: 3.	Malvino, D.Leach“Digital Principles and Applications”, 5th edition, Tata McGraw- Hill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

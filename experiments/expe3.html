@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="expe.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://pict.edu/">
+            <img src="../pictlogo30.png" alt="Logo">
+            <span class="college-name">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://pict.edu/" target="_blank" style="font-weight: bold; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../explist.html" style="font-weight: bold; font-size:20px;">Labs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#aim" data-toggle="collapse">Aim</a>
+        <a href="#equ" data-toggle="collapse">Equipments</a>
+        <a href="#theory" data-toggle="collapse">Theory</a>
+        <a href="#design" data-toggle="collapse">Design</a>
+        <a href="#procedure" data-toggle="collapse">Procedure</a>
+        <a href="#simulation" data-toggle="collapse">Simulation</a>
+        <a href="#FAQ" data-toggle="collapse">FAQ's</a>
+        <a href="#mcq" data-toggle="collapse">Test</a>
+        <a href="#references" data-toggle="collapse">References</a>
+    </div>
+
+    <div class="content">
+        <h1>Design and implement Single digit EXCESS-3 adder using IC 7483.</h1>
+        
+        <div id="aim" class="collapse show">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Aim</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                    Design and implement Single digit EXCESS-3 adder using IC 7483.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="equ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Equipments</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No.</th>
+                                    <th>COMPONENT</th>
+                                    <th>SPECIFICATION</th>
+                                    <th>DATASHEET LINK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>X-OR GATE</td>
+                                    <td>IC 7486</td>
+                                    <td><a href="https://example.com/datasheet7486" target="_blank">
+                                        Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>IC 4-BIT ADDER</td>
+            <td>IC 7483</td>
+            <td><a href="https://drive.google.com/file/d/1PvTk7FqzFv4U5n1w_YSaWsoCVAmmkHdd/view?usp=drive_link" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>NOT GATE</td>
+            <td>IC 7404</td>
+            <td><a href="https://example.com/datasheet7404" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>IC TRAINER KIT</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheettrainerkit" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>PATCH CORDS</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheetpatchcords" target="_blank">Datasheet</a></td>
+        </tr>
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="theory" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#theoryContent">
+                    <strong>Theory</strong>
+                </div>
+                <div id="theoryContent" class="collapse">
+                    <div class="card-body">
+                        <p>Excess-3 code is a non-weighted code. It is a modified form of a BCD code. The Excess-3 code can be derived from the natural BCD code by adding 3 to each coded number. It is also known as Self Complementary code.
+                        <br>Excess-3 code is a self-complementary code because 1’s complement of Excess-3 number is Excess-3 code for the 9’s complement of corresponding number.
+                            </p>
+                        <br>
+                        <p><b>Example: </b>Excess-3 code for (4)10 is (0111) 1’s complement of this number is 1000 Which is Excess-3 code for (5)10 and 5 XiSs-3 9’s complement of (4)10.
+                            </p>
+                        <br><br>
+                        <p>
+                        <b>Rules for Excess-3 addition: </b>
+                            
+                            <br><br>1.	Add two Excess-3 numbers 
+                            <br>2.	If carry is 1; add 3 to sum
+                            <br>3.	If carry is 0; subtract 3 from sum
+                        </p>
+                        <p><b>Example</b></p>
+                        <br>
+                        <img src="../img/expe3_1.png">
+
+                    </p><br>
+                    <p><b>Pin Diagram for IC 7483:</b></p>
+                    <br>
+                    <img src="../img/expe2_1.png">
+                    <br><br>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#procedureContent">
+                    <strong>Design</strong>
+                </div>
+                <div id="procedureContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>1] 4 bit Binary addition of excess 3 codes of two operands can be implemented with IC 7483</b></p>
+                        
+                        <p><b>2] We have to design the circuit which will either add 0011 or subtract 0011 i.e. add 1101</b></p>
+                        
+                        <img src="../img/expe3_2.png" width="400" height="400">
+                        <br><br>
+                    </p><br>
+                    <p><b>Pin Diagram for IC 7483:</b></p>
+                    <br>
+                    <img src="../img/expe3_3.png">
+                    <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div id="procedure" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Procedure</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Follow the below steps</b></p>
+                        1. Connections were given as per circuit diagram. 
+                        <br>2. Logical inputs were given as per truth table.
+                        <br>3. Observe the logical output and verify with the truth tables.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Simulation</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        Interactive simulation of the experiment.
+                        <p>Here you can embed an interactive simulation tool or provide links to simulation resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="FAQ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#pretestContent">
+                    <strong>Frequently Asked Questions</strong>
+                </div>
+                <div id="pretestContent" class="collapse">
+                    <div class="card-body">
+                        <br>
+                        <p><b>Q.1] Explain the significance of Excess 3 Code?</b></p>
+                        <br>
+                        <p>Excess-3 (XS-3) code is a binary-coded decimal (BCD) code that adds 3 to each decimal digit before converting it to its 4-bit binary equivalent. This non-weighted, self-complementary code simplifies certain arithmetic operations, such as addition and subtraction, due to its inherent properties. It also aids in error detection by introducing redundancy, which helps identify and correct single-bit errors. Commonly used in digital systems like clocks and calculators, Excess-3 code facilitates efficient and error-minimized decimal number manipulation.</p>
+                        <br><br>
+
+                        <p><b>Q.2] Write the applications of BCD & Excess 3 code?</b></p>
+                        <br>
+                        <p>BCD (Binary-Coded Decimal) and Excess-3 code have distinct applications in digital systems. BCD is widely used in digital displays like clocks and calculators, as it facilitates easy conversion between human-readable decimal numbers and binary. It is also employed in financial calculations and commercial applications where precision is crucial, avoiding errors from binary floating-point representation. Additionally, BCD is useful in microcontrollers and embedded systems for straightforward programming and in digital measuring instruments for accurate data representation. On the other hand, Excess-3 code is utilized in error detection due to its redundancy and self-complementary properties, simplifying arithmetic operations such as subtraction. It is also used in data transmission for enhanced error checking and in some legacy systems for historical compatibility and simplified digital circuit design.
+                        <br><br>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mcq" class="collapse">
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#posttestContent">
+            <strong>Test</strong>
+        </div>
+        <div id="posttestContent" class="collapse">
+        <div class="container mt-5">
+        <form id="mcqForm">
+            <div class="form-group">
+                <label><b>Q.1 How many bits are required to represent numbers in Excess-3 code?</b></label>
+                <div>
+                    <input type="radio" name="question1" value="a"> a) 3 bits<br>
+                    <input type="radio" name="question1" value="b"> b) 4 bits<br>
+                    <input type="radio" name="question1" value="c"> c) 8 bits<br>
+                    <input type="radio" name="question1" value="d"> d) 10 bits
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.2 What is the advantage of using Excess-3 code in arithmetic operations?</b></label>
+                <div>
+                    <input type="radio" name="question2" value="a"> a) It simplifies the addition operation<br>
+                    <input type="radio" name="question2" value="b"> b) It reduces the complexity of the circuit<br>
+                    <input type="radio" name="question2" value="c"> c) It allows for faster computations<br>
+                    <input type="radio" name="question2" value="d"> d) It is easier to implement in hardware
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.3 How is addition performed using Excess-3 adder?</b></label>
+                <div>
+                    <input type="radio" name="question3" value="a"> a) By subtracting 3 from each input before adding<br>
+                    <input type="radio" name="question3" value="b"> b) By adding 3 to each input before adding<br>
+                    <input type="radio" name="question3" value="c"> c) By adding the Excess-3 representation of two numbers without any adjustment<br>
+                    <input type="radio" name="question3" value="d"> d) By subtracting the Excess-3 representation of one number from the other
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.4 What is the maximum decimal value that can be represented using 4 bits in Excess-3 code?</b></label>
+                <div>
+                    <input type="radio" name="question4" value="a"> a) 9<br>
+                    <input type="radio" name="question4" value="b"> b) 10<br>
+                    <input type="radio" name="question4" value="c"> c) 11<br>
+                    <input type="radio" name="question4" value="d"> d) 12
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.5 In Excess-3 addition, what happens if the sum of two numbers exceeds 9?</b></label>
+                <div>
+                    <input type="radio" name="question5" value="a"> a) Carry is ignored<br>
+                    <input type="radio" name="question5" value="b"> b) Carry is added to the next higher order bit<br>
+                    <input type="radio" name="question5" value="c"> c) Carry is added to the sum<br>
+                    <input type="radio" name="question5" value="d"> d) The result is discarded
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.6 What is the representation of the number 6 in Excess-3 code?</b></label>
+                <div>
+                    <input type="radio" name="question6" value="a"> a) 1001<br>
+                    <input type="radio" name="question6" value="b"> b) 0110<br>
+                    <input type="radio" name="question6" value="c"> c) 1101<br>
+                    <input type="radio" name="question6" value="d"> d) 1110
+                </div>
+            </div>
+            <center><button type="button" id="submitTestButton" class="btn btn-primary">Submit Test</button></center>
+        <br><br>
+        </form>
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Test Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="scoreText">You scored : </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('submitTestButton').addEventListener('click', function() {
+    // Check if all questions are answered
+    if (validateAnswers()) {
+        // Calculate the score
+        let score = calculateScore();
+
+        // Set the score text
+        document.getElementById('scoreText').textContent = 'You scored : ' + score + '/6';
+
+        // Show the modal
+        $('#scoreModal').modal('show');
+    } else {
+        // Alert the user if any question is unanswered
+        alert("Please answer all the questions before submitting.");
+    }
+});
+
+// Event listener for the modal close event
+// Event listener for the modal close event
+$('#scoreModal').on('hidden.bs.modal', function () {
+    // Reset all highlighted options
+    resetOptions();
+
+    // Uncheck all radio buttons
+    $('input[type="radio"]').prop('checked', false);
+    highlightAnswers();
+});
+
+
+function validateAnswers() {
+    // Check if all questions are answered
+    let allAnswered = true;
+
+    // Loop through each question
+    for (let i = 1; i <= 5; i++) {
+        let selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+        if (!selectedOption) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    return allAnswered;
+}
+
+function resetOptions() {
+    // Reset all highlighted options
+    let options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+    });
+}
+
+function calculateScore() {
+    let score = 0;
+
+    // Check answers
+    if (document.querySelector('input[name="question1"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question2"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question3"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question4"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question5"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question6"]:checked')?.value === 'c') score++;
+
+    // Highlight answers
+    highlightAnswers();
+
+    return score;
+}
+
+function highlightAnswers() {
+    // Question 1
+    highlightQuestion('question1', 'b');
+    // Question 2
+    highlightQuestion('question2', 'a');
+    // Question 3
+    highlightQuestion('question3', 'c');
+    // Question 4
+    highlightQuestion('question4', 'a');
+    // Question 5
+    highlightQuestion('question5', 'b');
+
+    highlightQuestion('question6', 'c');
+
+}
+
+function highlightQuestion(questionName, correctAnswer) {
+    let options = document.getElementsByName(questionName);
+    options.forEach(option => {
+        if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+        } else if (option.checked) {
+            option.parentElement.classList.add('incorrect');
+        }
+    });
+}
+
+</script>
+
+
+        <div id="references" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#referencesContent">
+                    <strong>References</strong>
+                </div>
+                <div id="referencesContent" class="collapse">
+                    <div class="card-body">
+                        <ul>
+                            <li>Reference 1: “Digital Fundamentals” by Floyd & Jain</li>
+                            <li>Reference 2: R. P. Jain, “Modern Digital Electronics”, 3rd Edition, Tata McGraw-Hill</li>
+                            <li>Reference 3: 3.	Malvino, D.Leach“Digital Principles and Applications”, 5th edition, Tata McGraw- Hill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="expe.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="https://pict.edu/">
+            <img src="../pictlogo30.png" alt="Logo">
+            <span class="college-name">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://pict.edu/" target="_blank" style="font-weight: bold; font-size:20px;">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../explist.html" style="font-weight: bold; font-size:20px;">Labs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#aim" data-toggle="collapse">Aim</a>
+        <a href="#equ" data-toggle="collapse">Equipments</a>
+        <a href="#theory" data-toggle="collapse">Theory</a>
+        <a href="#design" data-toggle="collapse">Design</a>
+        <a href="#procedure" data-toggle="collapse">Procedure</a>
+        <a href="#simulation" data-toggle="collapse">Simulation</a>
+        <a href="#FAQ" data-toggle="collapse">FAQ's</a>
+        <a href="#mcq" data-toggle="collapse">Test</a>
+        <a href="#references" data-toggle="collapse">References</a>
+    </div>
+
+    <div class="content">
+        <h1> Design and implement 3-bit Up and 3-bit Down asynchronous counters using master-slave JK flip-flop IC 7476. </h1>
+        
+        <div id="aim" class="collapse show">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Aim</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        To design and implement 4 bit UP, Down, Controlled UP/Down asynchronous Counter using MS-JK Flip-flop.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="equ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#aimContent" aria-expanded="true">
+                    <strong>Equipments</strong>
+                </div>
+                <div id="aimContent" class="collapse show">
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sr.No.</th>
+                                    <th>COMPONENT</th>
+                                    <th>SPECIFICATION</th>
+                                    <th>DATASHEET LINK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+        <tr>
+            <td>1.</td>
+            <td>MS-JK Flip-flop</td>
+            <td>IC 7476</td>
+            <td><a href="https://drive.google.com/file/d/1PvTk7FqzFv4U5n1w_YSaWsoCVAmmkHdd/view?usp=drive_link" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>OR GATE</td>
+            <td>IC 7432</td>
+            <td><a href="https://example.com/datasheet7432" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>NOT GATE</td>
+            <td>IC 7404</td>
+            <td><a href="https://example.com/datasheet7404" target="_blank">Datasheet</a></td>
+        </tr>
+
+        <tr>
+            <td>4.</td>
+            <td>AND GATE</td>
+            <td>IC 7408</td>
+            <td><a href="https://drive.google.com/file/d/1PvTk7FqzFv4U5n1w_YSaWsoCVAmmkHdd/view?usp=drive_link" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>IC TRAINER KIT</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheettrainerkit" target="_blank">Datasheet</a></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>PATCH CORDS</td>
+            <td>-</td>
+            <td><a href="https://example.com/datasheetpatchcords" target="_blank">Datasheet</a></td>
+        </tr>
+    </tbody>
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="theory" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#theoryContent">
+                    <strong>Theory</strong>
+                </div>
+                <div id="theoryContent" class="collapse">
+                    <div class="card-body">
+                        <b>1) Asynchronous counter: </b><br>
+                        <p>A digital counter is a set of flip-flop. When state changes in response to a pulse applied at i/p to counter. The flip-flopare connected such that their combined state at any time is binary equivalent of total no. of pulses that have occurred up to that time. Thus its name implies a counter is used to count pulse. A counter is used as frequency dividers. To obtain waveform with a frequency that is a specific fraction of the clock frequency.
+                            <br>The Asynchronous counter is also called as ripple counter .An Asynchronous counter uses T flip-flop to perform a counting function. The actual hardware used is usually J-K flip- flop connected to logic1.Even D flip-flops may be used here.
+                            <br>In asynchronous counter commonly called ripple counter, the first flip-flop is clocked by the external clock pulse & then each successive flip-flop is clocked by the Q or /Q’ output the previous flip-flop. Therefore, in an asynchronous counter, the flip-flop are not clocked simultaneously. The input of MS-JK is connected to VCC because when both inputs are one output is toggled.
+                        </p>
+
+                        <b>2) Up Counter: </b><br>
+                        <p>Fig 1 shows 4 bit Asynchronous up Counter. Here Flip-flop A act as an MSB Flip- flop and Flip-flop D can act as an LSB Flip-flop. The clock pulse is connected to the Clock of Flip-flop D. Output of Flip-flop D (Qd) is connected to the clock of next flip-flop (i.e. Flip- flop C) and so on.<br>As soon as clock pulse change output is going to change (at the negative edge of the clock pulse) as an Up count sequence</p>
+                        
+                        <b>2) Down Counter: </b><br>
+                        <p>Fig 2 shows 4 bit Asynchronous Down Counter. Here Flip-flop A act as an MSB Flip- flop and Flip-flop D can act as an LSB Flip-flop. The clock pulse is connected to the Clock of Flip-flop D. Output of Flip-flop D (Qd’) is connected to the clock of next flip-flop (i.e. Flip- flop C) and so on.
+                            <br>As soon as clock pulse change output is going to change (at the negative edge of the clock pulse) as a Down count sequence. For 4 bit down counter Truth table is as shown below.
+                            In both the counters Inputs J and K are connected to Vcc hence, J-K Flip-flop can work in toggle mode. Preset and Clear both are connected to logic 1.
+                            </p>
+
+
+                        <br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="design" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#procedureContent">
+                    <strong>Design</strong>
+                </div>
+                <div id="procedureContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>1] UP COUNTER: </b></p><br><br>
+
+                            <b>Truth Table: </b><br>
+                            <img src="../img/expe6_1.png" width="600" height="300">
+                            <br><br>
+                            <br>
+                            <p><b>Logic Diagram:</b></p>
+                            <br>
+                            <img src="../img/expe6_2.png"  width="600" height="400">
+                            <br><br>
+
+                            <p><b>2] DOWN COUNTER: </b></p><br><br>
+
+                            <b>Truth Table: </b><br>
+                            <img src="../img/expe6_3.png" width="600" height="300">
+                            <br><br>
+                            <br>
+                            <p><b>Logic Diagram:</b></p>
+                            <br>
+                            <img src="../img/expe6_4.png"  width="600" height="400">
+                            <br><br>
+                           
+                            <p><b>3- bit Asynchronous up/Down counter:</b></p>
+                            <p>As the name indicates an up/ down counter which can count both in upward & downward direction. It is also called as a forward/backward counter or bidirectional counter so a control signal or a mode signal M is required to choose the directional of the count. When M=1 for up counting Q1 is transmitted to the clock of FF2 & M=2 for down counting Q1 is transmitted to the clock of FF2. This is achieved by using two AND gate & one OR gate as shown in fig. the external clock signal is applied to FF1.
+                                 <br><br>
+                                 The design of combination circuit as shown in fig is desired from the truth table. The combinational circuit is designed from the present state & next state. After solving the K-map for truth table of counter we get equation for clock signal so as Clock signal FF=Q1M+Q1M</p>
+                            <br>
+                            <p><b>Truth table of 3-Bit up/down Counter: </b><br>
+                                <b>M=0 up counter, M=1 down counter: </b>
+                            </p>
+                            <br>
+                            
+                            <img src="../img/expe6_5.png" width="400" height="400">
+                            <br><br>
+
+                            <p><b>K-Map: </b>
+                            </p>
+                            <img src="../img/expe6_6.png" width="400" height="400">
+                            <br><br>
+
+                            <p><b>Logic Diagram: </b>
+                            </p>
+                            <img src="../img/expe6_7.png" width="600" height="400">
+                            <br><br><br>
+    
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div id="procedure" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Procedure</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        <p><b>Follow the below steps</b></p>
+                        1. Connections were given as per circuit diagram. 
+                        <br>2. Logical inputs were given as per truth table.
+                        <br>3. Observe the logical output and verify with the truth tables.
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#simulationContent">
+                    <strong>Simulation</strong>
+                </div>
+                <div id="simulationContent" class="collapse">
+                    <div class="card-body">
+                        Interactive simulation of the experiment.
+                        <p>Here you can embed an interactive simulation tool or provide links to simulation resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="FAQ" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#pretestContent">
+                    <strong>Frequently Asked Questions</strong>
+                </div>
+                <div id="pretestContent" class="collapse">
+                    <div class="card-body">
+                        <br>
+                        <p><b>Q.1] What do you mean by Counter?</b></p>
+                        <br>
+                        <p>A Counter is a register capable of counting the no. of clock pulses arriving at its
+                            clock inputs. Count represents the no. of clock pulses arrived. A specified sequence of states appears as the counter output.
+                            br><br>
+
+                        <p><b>Q.2] What are the types of Counters? Explain each?</b></p>
+                        <br>
+                         <p>There are two types of counters as Asynchronous Counter and Synchronous Counter. 
+                            <br><u>Asynchronous Counter:</u> In this counter, the first flip-flop is clocked by the external clock pulse and then each successive flip-flop is clocked by the Q or Q’ o/p of the previous flip- flop. Hence in Asynchronous Counter flip-flops are not clocked simultaneously and hence called as Ripple Counter. 
+                            <br><u>Synchronous Counter:</u> In this counter, the common clock input is connected to all the flip-flops simultaneously.
+                            
+                        <br>
+
+                        <p><b>Q.3] What do you mean by pre-settable counters?</b></p>
+                        <br>
+                        <p>A counter in which starting state is not zero can be designed by making use of the preset inputs of the flip flops. This is referred to as loading the counter asynchronously. This is referred to as pre-settable counter.</p>
+                        <br>
+                        
+                        <p><b>Q.4] What are the applications of synchronous counters?</b></p>
+                        <br>
+                        <p>- Digital clock<br>
+                           - Frequency divider circuits <br>
+                           - Frequency counters<br>
+                           - Used in analog to digital converters
+                        </p><br>
+
+                        <p><b>Q.5] What are the advantages of synchronous counters over asynchronous counters?</b></p>
+                        <br>
+                        <p>- Propagation delay time is reduced.<br>
+                        - It can operate at a much higher frequency than the asynchronous counters.
+                            
+                        </p><br>
+                        <p><b>Q.6] Ring counter is an example of synchronous counters or asynchronous counter?</b></p>
+                        <br>
+                        <p>In synchronous counter all the flip flops are clocked simultaneously.
+                        </p><br>
+
+                        <p><b>Q.7] Twisted Ring (Johnson’s) counter is an example of synchronous counters or asynchronous counter?</b></p>
+                        <br>
+                        <p>In synchronous counter all the flip flops are clocked simultaneously.
+                        </p><br>
+
+                        <p><b>Q.8] What is the difference between ring counter and twisted ring counter?</b></p>
+                        <br>
+                        <p>In ring counter pulses to be counted are applied to a counter , it goes from state to state and the output of the flip flop s in the counter is decoded to read the count. Here the uncomplimentary output (Q) of last flip flop is fed back as an input to first flip flop. Ring counters are referred as MOD ‘N’ counters.
+                            But in Twisted ring counter the complimentary output (Q bar) of last flip flop is fed back as an input to first flip flop. Twisted Ring counters are referred as MOD ‘2N’ counters.
+                            
+                        </p><br>
+                        <p><b>Q.9] What are the applications of ring counters?</b></p>
+                        <br>
+                        <p>Ring counter outputs are sequential non-overlapping pulses which are useful for control state counters, Used in stepper motor, this requires pulses to rotate it from one position to the next. Used as divide by ‘N’ ((MOD ‘N’) counters.
+                        </p><br>
+                        
+                        <p><b>Q.10] What are the applications of ring counter twisted ring counters? </b></p>
+                        <br>
+                        <p>- Used as divide by ‘2N’ ((MOD ‘2N’) counters.<br>
+                         - Used for control state counters.<br>
+                         - Used for generation of multiphase clock.<br>
+                            
+                        </p><br>
+                        <br>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mcq" class="collapse">
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#posttestContent">
+            <strong>Test</strong>
+        </div>
+        <div id="posttestContent" class="collapse">
+        <div class="container mt-5">
+        <form id="mcqForm">
+            <div class="form-group">
+                <label><b>Q.1 In an asynchronous counter, each flip-flop is triggered by the output of the previous flip-flop. </b></label>
+                <div>
+                    <input type="radio" name="question1" value="a"> a) True<br>
+                    <input type="radio" name="question1" value="b"> b) False
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.2 Which of the following is a characteristic of an asynchronous counter?</b></label>
+                <div>
+                    <input type="radio" name="question2" value="a"> a) All flip-flops are triggered by a common clock pulse<br>
+                    <input type="radio" name="question2" value="b"> b) Each flip-flop is triggered by the output of the previous flip-flop <br>
+                    <input type="radio" name="question2" value="c"> c) All flip-flops change states simultaneously <br>
+                    <input type="radio" name="question2" value="d"> d) Only the first flip-flop is triggered by an external clock pulse
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.3 Which type of counter can count both up and down depending on the control inputs?</b></label>
+                <div>
+                    <input type="radio" name="question3" value="a"> a) Asynchronous counter<br>
+                    <input type="radio" name="question3" value="b"> b) Synchronous counter<br>
+                    <input type="radio" name="question3" value="c"> c) Controlled asynchronous counter<br>
+                    <input type="radio" name="question3" value="d"> d) Modulus counter
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.4 What is the advantage of a controlled asynchronous counter over a regular asynchronous counter? </b></label>
+                <div>
+                    <input type="radio" name="question4" value="a"> a) Controlled counting direction <br>
+                    <input type="radio" name="question4" value="b"> b) Faster counting speed<br>
+                    <input type="radio" name="question4" value="c"> c) Lower power consumption <br>
+                    <input type="radio" name="question4" value="d"> d) Simpler design
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Q.5 How many states does a 3-bit up counter have?
+                </b></label>
+                <div>
+                    <input type="radio" name="question5" value="a"> a) 4<br>
+                    <input type="radio" name="question5" value="b"> b) 6<br>
+                    <input type="radio" name="question5" value="c"> c) 8<br>
+                    <input type="radio" name="question5" value="d"> d) 10
+                </div>
+            </div>
+            <center><button type="button" id="submitTestButton" class="btn btn-primary">Submit Test</button></center>
+        <br><br>
+        </form>
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Test Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="scoreText">You scored : </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</div>
+<script>
+document.getElementById('submitTestButton').addEventListener('click', function() {
+    // Check if all questions are answered
+    if (validateAnswers()) {
+        // Calculate the score
+        let score = calculateScore();
+
+        // Set the score text
+        document.getElementById('scoreText').textContent = 'You scored : ' + score + '/5';
+
+        // Show the modal
+        $('#scoreModal').modal('show');
+    } else {
+        // Alert the user if any question is unanswered
+        alert("Please answer all the questions before submitting.");
+    }
+});
+
+// Event listener for the modal close event
+// Event listener for the modal close event
+$('#scoreModal').on('hidden.bs.modal', function () {
+    // Reset all highlighted options
+    resetOptions();
+
+    // Uncheck all radio buttons
+    $('input[type="radio"]').prop('checked', false);
+    highlightAnswers();
+});
+
+
+function validateAnswers() {
+    // Check if all questions are answered
+    let allAnswered = true;
+
+    // Loop through each question
+    for (let i = 1; i <= 5; i++) {
+        let selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+        if (!selectedOption) {
+            allAnswered = false;
+            break;
+        }
+    }
+
+    return allAnswered;
+}
+
+function resetOptions() {
+    // Reset all highlighted options
+    let options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('correct', 'incorrect');
+    });
+}
+
+function calculateScore() {
+    let score = 0;
+
+    // Check answers
+    if (document.querySelector('input[name="question1"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question2"]:checked')?.value === 'b') score++;
+    if (document.querySelector('input[name="question3"]:checked')?.value === 'c') score++;
+    if (document.querySelector('input[name="question4"]:checked')?.value === 'a') score++;
+    if (document.querySelector('input[name="question5"]:checked')?.value === 'c') score++;
+
+    // Highlight answers
+    highlightAnswers();
+
+    return score;
+}
+
+function highlightAnswers() {
+    // Question 1
+    highlightQuestion('question1', 'a');
+    // Question 2
+    highlightQuestion('question2', 'b');
+    // Question 3
+    highlightQuestion('question3', 'c');
+    // Question 4
+    highlightQuestion('question4', 'a');
+    // Question 5
+    highlightQuestion('question5', 'c');
+}
+
+function highlightQuestion(questionName, correctAnswer) {
+    let options = document.getElementsByName(questionName);
+    options.forEach(option => {
+        if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+        } else if (option.checked) {
+            option.parentElement.classList.add('incorrect');
+        }
+    });
+}
+
+</script>
+
+
+        <div id="references" class="collapse">
+            <div class="card">
+                <div class="card-header" data-toggle="collapse" data-target="#referencesContent">
+                    <strong>References</strong>
+                </div>
+                <div id="referencesContent" class="collapse">
+                    <div class="card-body">
+                        <ul>
+                            <li>Reference 1: “Digital Fundamentals” by Floyd & Jain</li>
+                            <li>Reference 2: R. P. Jain, “Modern Digital Electronics”, 3rd Edition, Tata McGraw-Hill</li>
+                            <li>Reference 3: 3.	Malvino, D.Leach“Digital Principles and Applications”, 5th edition, Tata McGraw- Hill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
